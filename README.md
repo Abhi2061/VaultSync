@@ -93,4 +93,5 @@ MIT — free to use and adapt.
 ## 🧑‍💻 Author
 
 **Abhishek Kumar**  
-GitHub: [@your-github](https://github.com/your-github)
+GitHub: [@Abhi2061-Github](https://github.com/Abhi2061)
+LinkedIn: [@Abhishek-LinkedIn] (https://www.linkedin.com/in/abhishek-kumar-cu/)
