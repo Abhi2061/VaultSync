@@ -14,6 +14,8 @@ const HomePage = () => {
   const [retrievedSyncKey, setRetrievedSyncKey] = useState("");
   const [copied, setCopied] = useState(false);
 
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
   useEffect(() => {
     fetchServices();
   }, []);
@@ -23,7 +25,7 @@ const HomePage = () => {
     if (!idToken) return;
   
     try {
-      const res = await fetch("https://us-central1-vaultsync-2061.cloudfunctions.net/api/vault", {
+      const res = await fetch(`${API_BASE_URL}/vault`, {
         headers: {
           Authorization: `Bearer ${idToken}`,
         },
@@ -81,7 +83,7 @@ const HomePage = () => {
   
     try {
       const idToken = localStorage.getItem("idToken");
-      const res = await fetch(`https://us-central1-vaultsync-2061.cloudfunctions.net/api/vault/${selectedService}`, {
+      const res = await fetch(`${API_BASE_URL}/vault/${selectedService}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -110,7 +112,7 @@ const HomePage = () => {
   
     try {
       const idToken = localStorage.getItem("idToken");
-      const res = await fetch("https://us-central1-vaultsync-2061.cloudfunctions.net/api/vault", {
+      const res = await fetch(`${API_BASE_URL}/vault`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -12,6 +12,7 @@ const AuthForm = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate(); // Hook for redirection
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   const toggleForm = () => {
     setIsLogin((prev) => !prev);
@@ -29,7 +30,7 @@ const AuthForm = () => {
     try {
       if (isLogin) {
         // use api to login
-        const response = await fetch("https://us-central1-vaultsync-2061.cloudfunctions.net/api/login", {
+        const response = await fetch(`${API_BASE_URL}/login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -51,7 +52,7 @@ const AuthForm = () => {
   
       } else {
         // use api to signup
-        const response = await fetch("https://us-central1-vaultsync-2061.cloudfunctions.net/api/signup", {
+        const response = await fetch(`${API_BASE_URL}/signup`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -92,7 +93,7 @@ const AuthForm = () => {
       localStorage.setItem("idToken", idToken);
   
       // ✅ Send ID token to your backend for verification
-      const response = await fetch("https://us-central1-vaultsync-2061.cloudfunctions.net/api/google-signin", {
+      const response = await fetch(`${API_BASE_URL}/google-signin`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
