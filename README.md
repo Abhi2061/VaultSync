@@ -94,4 +94,4 @@ MIT — free to use and adapt.
 
 **Abhishek Kumar**  
 GitHub: [@Abhi2061-Github](https://github.com/Abhi2061)
-LinkedIn: [@Abhishek-LinkedIn] (https://www.linkedin.com/in/abhishek-kumar-cu/)
+LinkedIn: [@Abhishek-LinkedIn](https://www.linkedin.com/in/abhishek-kumar-cu/)
