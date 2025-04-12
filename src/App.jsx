@@ -4,6 +4,7 @@ import AuthForm from "./Auth/AuthForm";
 import HomePage from "./Home/HomePage";
 import ProtectedRoute from "./Auth/ProtectedRoute";
 import RedirectIfLoggedIn from "./Auth/RedirectIfLoggedIn";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
