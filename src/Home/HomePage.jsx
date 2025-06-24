@@ -183,7 +183,7 @@ const HomePage = () => {
               <option key={serv.id} value={serv.id}>{serv.serviceName}</option>
             ))}
           </select>
-          <input type="text" placeholder="Master Key" value={secret} onChange={(e) => setSecret(e.target.value)} />
+          <input type="password" placeholder="Master Key" value={secret} onChange={(e) => setSecret(e.target.value)} />
           <button onClick={handleGetPassword}>Get Password</button>
         </div>
       ) : (
