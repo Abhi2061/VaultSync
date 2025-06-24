@@ -32,7 +32,12 @@ const HomePage = () => {
       });
   
       const data = await res.json();
-      if (res.ok) setServices(data);
+      
+      if (res.ok) {
+        const sorted = data.sort((a, b) => a.serviceName.localeCompare(b.serviceName));
+        setServices(sorted);
+      }
+      
       else console.warn("Error loading Services", data.error);
     } catch (err) {
       console.error("Error fetching Services:", err);
